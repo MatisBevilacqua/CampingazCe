@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil
+{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{asset('css/home.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	<div class="img_top_logo">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg" alt="l'image charge">
+	</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="user/home" id="home"><img src="{{asset('img/home-open.png')}}">Accueil</a>
+				</li>
+				<li><a href="/user/news" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
+				</li>
+				<li><a href="/user/offers" id="offers"><img src="{{asset('img/discount-closed.png')}}">Offres</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <main>
+        <div id="banner_top">
+            <section id="banner_top_filter">
+                <h1>LE CE DE CAMPINGAZ</h1>
+                <p>Retrouvez toutes les acualités et offres du ce de campingaz.</p>
+            </section>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{asset('css/news.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	<div class="img_top_logo">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg" alt="l'image charge">
+	</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/user/home" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
+				</li>
+				<li><a href="/user/news" id="news"><img src="{{asset('img/news-open.png')}}">Actualités</a>
+				</li>
+				<li><a href="/user/offers" id="offers"><img src="{{asset('img/discount-closed.png')}}">Offres</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <main>
+        <div id="banner_top">
+            <section id="banner_top_filter">
+                <h1>LE CE DE CAMPINGAZ</h1>
+                <p>Retrouvez toutes les acualités du ce de campingaz.</p>
+            </section>
+        </div>
+		<div id="bar">
+			
+		</div>
+		<div id="container">
+		{% for new in news %}
+			<div class="offers_db">
+			{% if new.title is not empty %}
+				<h2>{{new.title}}</h2>
+			{% endif %}
+			{% if new.description is not empty %}
+				<p>{{new.description}} {% if new.links is not empty %}
+					<a id="link_offers_db" href="{{new.links}}">ici</a>.</p>
+				{% endif %}
+			{% endif %}
+			{% if new.images is not empty %}
+				<div class="img_offers_db">
+					<img src={{new.images}}>
+				</div>
+			{% endif %}
+			</div>
+		{% endfor %}
+		</div>
+    </main>
+{% endblock %}

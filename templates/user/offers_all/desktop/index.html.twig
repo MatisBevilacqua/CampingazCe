@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bureau
+{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{asset('css/offres.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	<div class="img_top_logo">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg" alt="l'image charge">
+	</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/user/home" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
+				</li>
+				<li><a href="/user/news" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
+				</li>
+				<li><a href="/user/offers" id="offers"><img src="{{asset('img/discount-open.png')}}">Offres</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <main>
+        <div id="banner_top">
+            <section id="banner_top_filter">
+                <h1>LE CE DE CAMPINGAZ</h1>
+                <p>Retrouvez toutes les offres du ce de campingaz.</p>
+            </section>
+        </div>
+        
+		<div id="link">
+			<div class="row">
+				<a href="/user/offers/desktop">Le bureau</a>	
+				<a href="/user/offers/hobbies">Culture / Loisirs</a>
+			</div>
+
+			<div class="row">
+				<a href="/user/offers/travel">Voyages</a>
+				<a href="/user/offers/parteners">Partenaires</a>
+			</div>
+
+			<div class="row">
+				<a href="/user/offers/ticket">Billeteries</a>
+			</div>
+		</div>
+
+		<div id="bar">
+			
+		</div>
+		{% for desktop in desktop %}
+			<div class="offers_db">
+				<h2>{{desktop.title}}</h2>
+				{% if desktop is not empty %}
+					<p>{{desktop.description}}<a id="link_offers_db" href="{{desktop.title}}"> lien vers le partenaire ici</a>.</p>
+				{% endif %}
+			</div>
+		{% endfor %}
+    </main>
+{% endblock %}
