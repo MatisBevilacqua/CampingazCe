@@ -66,7 +66,7 @@ class __TwigTemplate_8e1a4e65421158c2a872295091b07135 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Home
+        echo "Actualités
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -173,7 +173,7 @@ class __TwigTemplate_8e1a4e65421158c2a872295091b07135 extends Template
                     // line 45
                     echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "links", [], "any", false, false, false, 45), "html", null, true);
-                    echo "\">ici</a>.</p>
+                    echo "\">accéder au partenaire</a>.</p>
 \t\t\t\t";
                 }
                 // line 47
@@ -229,7 +229,7 @@ class __TwigTemplate_8e1a4e65421158c2a872295091b07135 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Home
+{% block title %}Actualités
 {% endblock %}
 
 {% block stylesheets %}
@@ -271,7 +271,7 @@ class __TwigTemplate_8e1a4e65421158c2a872295091b07135 extends Template
 \t\t\t{% endif %}
 \t\t\t{% if new.description is not empty %}
 \t\t\t\t<p>{{new.description}} {% if new.links is not empty %}
-\t\t\t\t\t<a id=\"link_offers_db\" href=\"{{new.links}}\">ici</a>.</p>
+\t\t\t\t\t<a id=\"link_offers_db\" href=\"{{new.links}}\">accéder au partenaire</a>.</p>
 \t\t\t\t{% endif %}
 \t\t\t{% endif %}
 \t\t\t{% if new.images is not empty %}

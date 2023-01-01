@@ -93,7 +93,6 @@ main{
 
 .offers_db{
     width: 92.7%;
-    height:20vh;
     margin-top: 5vh;
     background-color: #004C9C;
     border-radius: 4px;
@@ -101,8 +100,8 @@ main{
     flex-direction: column;
     justify-content: center;
     padding-left: 3vw;
-    padding-top: 2vh;
-    padding-bottom: 1vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .img_offers_db{
@@ -113,7 +112,8 @@ main{
 }
 
 .img_offers_db > img{
-    width: 120px;
+    width: 170px;
+    margin-top: 5vh;
 }
 
 .offers_db > h2{

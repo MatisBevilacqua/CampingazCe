@@ -66,7 +66,7 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Acceuil
+        echo "Accueil
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -171,7 +171,7 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Acceuil
+{% block title %}Accueil
 {% endblock %}
 
 {% block stylesheets %}

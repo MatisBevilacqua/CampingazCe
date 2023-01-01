@@ -8,8 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Hobbies;
 
-
-
 class HobbiesController extends AbstractController
 {
     private $entityManager;
@@ -17,7 +15,6 @@ class HobbiesController extends AbstractController
     public function __construct(EntityManagerInterface $entityManager){
         $this->entityManager = $entityManager;
     }
-
 
     #[Route('user/offers/hobbies', name: 'app_hobbies')]
     public function index(): Response
