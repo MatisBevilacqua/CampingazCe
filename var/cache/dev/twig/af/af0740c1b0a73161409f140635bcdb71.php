@@ -116,7 +116,7 @@ class __TwigTemplate_f7daf1aea32602c074cc7ec1b857651a extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/user/home\" id=\"home\"><img src=\"";
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-closed.png"), "html", null, true);
         echo "\">Accueil</a>
@@ -300,7 +300,7 @@ class __TwigTemplate_f7daf1aea32602c074cc7ec1b857651a extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/user/home\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>

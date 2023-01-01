@@ -116,17 +116,17 @@ class __TwigTemplate_57030ef16b5e6de1d16b50ef76ef28d7 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"";
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-closed.png"), "html", null, true);
         echo "\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"user/news\" id=\"news\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"";
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
@@ -160,40 +160,39 @@ class __TwigTemplate_57030ef16b5e6de1d16b50ef76ef28d7 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 \t\t";
-        // line 54
+        // line 53
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["travels"]) || array_key_exists("travels", $context) ? $context["travels"] : (function () { throw new RuntimeError('Variable "travels" does not exist.', 54, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["travels"]) || array_key_exists("travels", $context) ? $context["travels"] : (function () { throw new RuntimeError('Variable "travels" does not exist.', 53, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["travel"]) {
-            // line 55
+            // line 54
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "title", [], "any", false, false, false, 56), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "title", [], "any", false, false, false, 55), "html", null, true);
             echo "</h2>
 \t\t\t\t<p>";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "description", [], "any", false, false, false, 57), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "description", [], "any", false, false, false, 56), "html", null, true);
             echo "
 \t\t\t\t";
-            // line 58
+            // line 57
             if ( !twig_test_empty($context["travel"])) {
-                // line 59
+                // line 58
                 echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "link", [], "any", false, false, false, 59), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["travel"], "link", [], "any", false, false, false, 58), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 61
+            // line 60
             echo "\t\t\t</div>\t\t\t
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['travel'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 62
         echo "    </main>
 ";
         
@@ -216,7 +215,7 @@ class __TwigTemplate_57030ef16b5e6de1d16b50ef76ef28d7 extends Template
 
     public function getDebugInfo()
     {
-        return array (  197 => 63,  190 => 61,  184 => 59,  182 => 58,  178 => 57,  174 => 56,  171 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  196 => 62,  189 => 60,  183 => 58,  181 => 57,  177 => 56,  173 => 55,  170 => 54,  166 => 53,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -237,11 +236,11 @@ class __TwigTemplate_57030ef16b5e6de1d16b50ef76ef28d7 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
+\t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
+\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>
@@ -272,7 +271,6 @@ class __TwigTemplate_57030ef16b5e6de1d16b50ef76ef28d7 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 \t\t{% for travel in travels %}
 \t\t\t<div class=\"offers_db\">

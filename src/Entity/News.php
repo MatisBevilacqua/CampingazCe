@@ -27,6 +27,8 @@ class News
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $images = null;
 
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dates = null;
 
     public function getId(): ?int
     {
@@ -89,6 +91,18 @@ class News
     public function setImages(?string $images): self
     {
         $this->images = $images;
+
+        return $this;
+    }
+
+    public function getDates(): ?\DateTimeInterface
+    {
+        return $this->dates;
+    }
+
+    public function setDates(\DateTimeInterface $dates): self
+    {
+        $this->dates = $dates;
 
         return $this;
     }

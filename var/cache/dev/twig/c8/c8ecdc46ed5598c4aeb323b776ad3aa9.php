@@ -116,7 +116,7 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"user/home\" id=\"home\"><img src=\"";
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-open.png"), "html", null, true);
         echo "\">Accueil</a>
@@ -142,6 +142,10 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
                 <p>Retrouvez toutes les acualités et offres du ce de campingaz.</p>
             </section>
         </div>
+
+\t\t<div id=\"bar\">
+\t\t</div>
+
     </main>
 ";
         
@@ -185,7 +189,7 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"user/home\" id=\"home\"><img src=\"{{asset('img/home-open.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-open.png')}}\">Accueil</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
@@ -202,6 +206,10 @@ class __TwigTemplate_ccd723156c6052f8bc5b8ee245751ccd extends Template
                 <p>Retrouvez toutes les acualités et offres du ce de campingaz.</p>
             </section>
         </div>
+
+\t\t<div id=\"bar\">
+\t\t</div>
+
     </main>
 {% endblock %}
 ", "user/home/home.html.twig", "/Applications/MAMP/htdocs/campingaz-ce/templates/user/home/home.html.twig");

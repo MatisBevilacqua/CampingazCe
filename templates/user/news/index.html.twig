@@ -14,7 +14,7 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/user/home" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
+				<li><a href="/" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
 				</li>
 				<li><a href="/user/news" id="news"><img src="{{asset('img/news-open.png')}}">Actualités</a>
 				</li>
@@ -32,16 +32,21 @@
             </section>
         </div>
 		<div id="bar">
-			
+
 		</div>
 		<div id="container">
 		{% for new in news %}
 			<div class="offers_db">
-			{% if new.title is not empty %}
-				<h2>{{new.title}}</h2>
-			{% endif %}
+				<div class="title_dates_offers_db">
+					{% if new.title is not empty %}
+						<h2>{{new.title}}</h2>
+					{% endif %}
+					<div class="space_offers_db"></div>
+					<p class="dates">{{ new.dates|format_datetime('short', 'none', locale='fr') }}</p>
+				</div>
 			{% if new.description is not empty %}
-				<p>{{new.description}} {% if new.links is not empty %}
+				<p>{{new.description}}
+				{% if new.links is not empty %}
 					<a id="link_offers_db" href="{{new.links}}">accéder au partenaire</a>.</p>
 				{% endif %}
 			{% endif %}

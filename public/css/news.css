@@ -88,7 +88,7 @@ main{
 }
 
 #banner_top_filter > p{
-    width: 65vw;
+    width: 75vw;
 }
 
 .offers_db{
@@ -102,6 +102,22 @@ main{
     padding-left: 3vw;
     padding-top: 5vh;
     padding-bottom: 5vh;
+}
+
+.offers_db > .title_dates_offers_db{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+
+.offers_db > .title_dates_offers_db > .space_offers_db{
+    width: 20px;
+    height: 2px;
+    background-color: #FFF;
+    transform: rotate(90deg);
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 2px;
 }
 
 .img_offers_db{
@@ -122,7 +138,8 @@ main{
 
 .offers_db > p{
     padding-top: 2vh;
-    width: 65vw;
+    width: 80vw;
+    line-height: 1.5;
 }
 
 #link_offers_db{

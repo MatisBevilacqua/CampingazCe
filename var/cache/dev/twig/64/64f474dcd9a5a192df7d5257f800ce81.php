@@ -116,17 +116,17 @@ class __TwigTemplate_0ddd46f6bba13645a7f80ec0b63e82c6 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"";
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-closed.png"), "html", null, true);
         echo "\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a  href=\"user/news\" id=\"news\"><img src=\"";
+\t\t\t\t<li><a  href=\"/user/news\" id=\"news\"><img src=\"";
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href-\"/user/offers\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
@@ -238,11 +238,11 @@ class __TwigTemplate_0ddd46f6bba13645a7f80ec0b63e82c6 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a  href=\"user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
+\t\t\t\t<li><a  href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
+\t\t\t\t<li><a href-\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>

@@ -5017,6 +5017,9 @@
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.intl"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension"/>
       </call>
       <call method="addGlobal">
@@ -5349,6 +5352,9 @@
       <argument type="service" id="data_collector.dump" on-invalid="ignore"/>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
+    <service id="twig.extension.intl" class="Twig\Extra\Intl\IntlExtension">
+      <tag name="twig.extension"/>
+    </service>
     <service id="security.authorization_checker" class="Symfony\Component\Security\Core\Authorization\AuthorizationChecker">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="debug.security.access.decision_manager"/>
