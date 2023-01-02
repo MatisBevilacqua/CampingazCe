@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link href="{{asset('css/news.css') }}" type="text/css" rel="stylesheet"/>
+	<link href="{{asset('css/news.css') }}" type="text/css" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
@@ -18,45 +18,50 @@
 				</li>
 				<li><a href="/user/news" id="news"><img src="{{asset('img/news-open.png')}}">Actualités</a>
 				</li>
-				<li><a href="/user/offers" id="offers"><img src="{{asset('img/discount-closed.png')}}">Offres</a>
+				<li><a href="/user/offers/desktop" id="offers"><img src="{{asset('img/discount-closed.png')}}">Offres</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 
-    <main>
-        <div id="banner_top">
-            <section id="banner_top_filter">
-                <h1>LE CE DE CAMPINGAZ</h1>
-                <p>Retrouvez toutes les acualités du ce de campingaz.</p>
-            </section>
-        </div>
+	<main>
+		<div id="banner_top">
+			<section id="banner_top_filter">
+				<h1>Actualités</h1>
+				<p>Retrouvez toutes les acualités du ce de campingaz.</p>
+			</section>
+		</div>
 		<div id="bar">
 
 		</div>
 		<div id="container">
-		{% for new in news %}
-			<div class="offers_db">
-				<div class="title_dates_offers_db">
-					{% if new.title is not empty %}
-						<h2>{{new.title}}</h2>
+			{% if news is empty %}
+				<img id="empty" src="{{asset('img/empty.png')}}">
+				<h2 id="empty_content">Aucune actualités...</h2>
+			{% endif %}
+			{% for new in news %}
+				<div class="offers_db">
+					<div class="title_dates_offers_db">
+						{% if new.title is not empty %}
+							<h2>{{new.title}}</h2>
+						{% endif %}
+						<div class="space_offers_db"></div>
+						<p class="dates">{{ new.dates|format_datetime('short', 'none', locale='fr') }}</p>
+					</div>
+					{% if new.description is not empty %}
+						<p>{{new.description}}
+						{% if new.links is not empty %}
+							<a id="link_offers_db" href="{{new.links}}">accéder au partenaire</a>.
+							</p>
+						{% endif %}
 					{% endif %}
-					<div class="space_offers_db"></div>
-					<p class="dates">{{ new.dates|format_datetime('short', 'none', locale='fr') }}</p>
+					{% if new.images is not empty %}
+						<div class="img_offers_db">
+							<img src={{new.images}}>
+						</div>
+					{% endif %}
 				</div>
-			{% if new.description is not empty %}
-				<p>{{new.description}}
-				{% if new.links is not empty %}
-					<a id="link_offers_db" href="{{new.links}}">accéder au partenaire</a>.</p>
-				{% endif %}
-			{% endif %}
-			{% if new.images is not empty %}
-				<div class="img_offers_db">
-					<img src={{new.images}}>
-				</div>
-			{% endif %}
-			</div>
-		{% endfor %}
+			{% endfor %}
 		</div>
-    </main>
+	</main>
 {% endblock %}

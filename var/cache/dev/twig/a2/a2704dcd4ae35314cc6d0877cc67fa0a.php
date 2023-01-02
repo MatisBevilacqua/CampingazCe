@@ -126,7 +126,7 @@ class __TwigTemplate_fa93d8fc2a7b8cb0128366253dc032d4 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-closed.png"), "html", null, true);
         echo "\">Offres</a>
@@ -139,13 +139,14 @@ class __TwigTemplate_fa93d8fc2a7b8cb0128366253dc032d4 extends Template
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
                 <h1>LE CE DE CAMPINGAZ</h1>
-                <p>Retrouvez toutes les acualités et offres du ce de campingaz.</p>
             </section>
         </div>
 
 \t\t<div id=\"bar\">
 \t\t</div>
 
+\t\t<section id=\"avis\">
+\t\t</section>
     </main>
 ";
         
@@ -193,7 +194,7 @@ class __TwigTemplate_fa93d8fc2a7b8cb0128366253dc032d4 extends Template
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-closed.png')}}\">Offres</a>
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-closed.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>
@@ -203,13 +204,14 @@ class __TwigTemplate_fa93d8fc2a7b8cb0128366253dc032d4 extends Template
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
                 <h1>LE CE DE CAMPINGAZ</h1>
-                <p>Retrouvez toutes les acualités et offres du ce de campingaz.</p>
             </section>
         </div>
 
 \t\t<div id=\"bar\">
 \t\t</div>
 
+\t\t<section id=\"avis\">
+\t\t</section>
     </main>
 {% endblock %}
 ", "user/home/home.html.twig", "/Applications/MAMP/htdocs/campingaz-ce/templates/user/home/home.html.twig");

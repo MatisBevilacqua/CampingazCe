@@ -126,7 +126,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
@@ -138,7 +138,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+                <h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -164,34 +164,44 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 \t\t</div>
 \t\t";
         // line 54
+        if (twig_test_empty((isset($context["desktop"]) || array_key_exists("desktop", $context) ? $context["desktop"] : (function () { throw new RuntimeError('Variable "desktop" does not exist.', 54, $this->source); })()))) {
+            // line 55
+            echo "\t\t\t<img id=\"empty\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/empty.png"), "html", null, true);
+            echo "\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t";
+        }
+        // line 58
+        echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($context["desktop"]);
         foreach ($context['_seq'] as $context["_key"] => $context["desktop"]) {
-            // line 55
+            // line 59
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 56), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 60), "html", null, true);
             echo "</h2>
 \t\t\t\t";
-            // line 57
+            // line 61
             if ( !twig_test_empty($context["desktop"])) {
-                // line 58
+                // line 62
                 echo "\t\t\t\t\t<p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "description", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "description", [], "any", false, false, false, 62), "html", null, true);
                 echo "<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 62), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 60
+            // line 64
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['desktop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 62
+        // line 66
         echo "    </main>
 ";
         
@@ -214,7 +224,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  195 => 62,  188 => 60,  180 => 58,  178 => 57,  174 => 56,  171 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  205 => 66,  198 => 64,  190 => 62,  188 => 61,  184 => 60,  181 => 59,  176 => 58,  169 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -239,7 +249,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>
@@ -248,7 +258,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+                <h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -272,6 +282,10 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 \t\t<div id=\"bar\">
 \t\t\t
 \t\t</div>
+\t\t{% if desktop is empty %}
+\t\t\t<img id=\"empty\" src=\"{{asset('img/empty.png')}}\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t{% endif %}
 \t\t{% for desktop in desktop %}
 \t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>{{desktop.title}}</h2>

@@ -126,7 +126,7 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
@@ -138,7 +138,7 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+\t\t\t\t<h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -161,38 +161,63 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
 \t\t";
-        // line 56
+        // line 55
+        if (twig_test_empty((isset($context["parteners"]) || array_key_exists("parteners", $context) ? $context["parteners"] : (function () { throw new RuntimeError('Variable "parteners" does not exist.', 55, $this->source); })()))) {
+            // line 56
+            echo "\t\t\t<img id=\"empty\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/empty.png"), "html", null, true);
+            echo "\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t";
+        }
+        // line 59
+        echo "
+\t\t";
+        // line 60
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["parteners"]) || array_key_exists("parteners", $context) ? $context["parteners"] : (function () { throw new RuntimeError('Variable "parteners" does not exist.', 56, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["parteners"]) || array_key_exists("parteners", $context) ? $context["parteners"] : (function () { throw new RuntimeError('Variable "parteners" does not exist.', 60, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["partener"]) {
-            // line 57
+            // line 61
+            echo "\t\t\t";
+            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["partener"], "dates", [], "any", false, false, false, 61))) {
+                // line 62
+                echo "\t\t\t\t<div class=\"offers_db_date\">
+\t\t\t\t\t\t<p class=\"dates\">
+\t\t\t\t\t\t\tdate limite :  <div class=\"space_offers_db\"></div>
+\t\t\t\t\t\t";
+                // line 65
+                echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatDateTime($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "dates", [], "any", false, false, false, 65), "short", "none", "", null, "gregorian", "fr"), "html", null, true);
+                echo "</p>
+\t\t\t\t</div>
+\t\t\t";
+            }
+            // line 68
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "title", [], "any", false, false, false, 58), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "title", [], "any", false, false, false, 69), "html", null, true);
             echo "</h2>
 \t\t\t\t<p>";
-            // line 59
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "description", [], "any", false, false, false, 59), "html", null, true);
-            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 59))) {
-                // line 60
+            // line 70
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "description", [], "any", false, false, false, 70), "html", null, true);
+            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 70))) {
+                // line 71
                 echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 60), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 71), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 62
+            // line 73
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['partener'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 75
         echo "    </main>
 ";
         
@@ -215,7 +240,7 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  196 => 64,  189 => 62,  183 => 60,  180 => 59,  176 => 58,  173 => 57,  169 => 56,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  221 => 75,  214 => 73,  208 => 71,  205 => 70,  201 => 69,  198 => 68,  192 => 65,  187 => 62,  184 => 61,  180 => 60,  177 => 59,  170 => 56,  168 => 55,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -240,7 +265,7 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>
@@ -249,7 +274,7 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+\t\t\t\t<h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -272,10 +297,21 @@ class __TwigTemplate_c44bf2cf05e8c16247b45f18a9b6a1c9 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
+\t\t{% if parteners is empty %}
+\t\t\t<img id=\"empty\" src=\"{{asset('img/empty.png')}}\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t{% endif %}
+
 \t\t{% for partener in parteners %}
+\t\t\t{% if partener.dates is not empty %}
+\t\t\t\t<div class=\"offers_db_date\">
+\t\t\t\t\t\t<p class=\"dates\">
+\t\t\t\t\t\t\tdate limite :  <div class=\"space_offers_db\"></div>
+\t\t\t\t\t\t{{ partener.dates|format_datetime('short', 'none', locale='fr') }}</p>
+\t\t\t\t</div>
+\t\t\t{% endif %}
 \t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>{{partener.title}}</h2>
 \t\t\t\t<p>{{partener.description}}{% if partener.link is not empty %}

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\TravelsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: TravelsRepository::class)]
 class Travels
@@ -21,6 +22,10 @@ class Travels
 
     #[ORM\Column(length: 255)]
     private ?string $link = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $dates = null;
+
 
     public function getId(): ?int
     {

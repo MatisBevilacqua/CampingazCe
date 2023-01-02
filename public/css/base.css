@@ -9,7 +9,19 @@
     border-radius: 0px;
 }
 
-.img_top_logo img{  
+#empty{
+    margin-top: 5vh;
+    max-width: 150px;
+}
+
+#empty_content{
+    font-size:18px;
+    margin-top: 1vh;
+    color: #004C9C;
+}
+
+
+.img_top_logo img{
     width: 150px;
     position: absolute;
     left: 0;

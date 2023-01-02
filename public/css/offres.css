@@ -82,14 +82,15 @@ main{
 
 .offers_db{
     width: 92.7%;
-    height:20vh;
-    margin-top: 5vh;    
+    margin-bottom: 5vh;
     background-color: #004C9C;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 3vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 
@@ -128,4 +129,27 @@ main{
     height: 2px;
     background-color: #C1C1C1;
     margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.offers_db_date {
+    width: 70vw;
+    height: 5vh;
+    background: #FFF;
+    border-top: solid 5px #C22939;
+    border-right: solid 5px #C22939;
+    border-left: solid 5px #C22939;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#004C9C;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.offers_db_date > p{
+    color:#004C9C;
 }

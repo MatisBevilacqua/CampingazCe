@@ -160,103 +160,102 @@ class __TwigTemplate_0e1fbb025c37139628620bc92ed39731 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
 \t\t";
-        // line 55
+        // line 54
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["parteners"]) || array_key_exists("parteners", $context) ? $context["parteners"] : (function () { throw new RuntimeError('Variable "parteners" does not exist.', 55, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["parteners"]) || array_key_exists("parteners", $context) ? $context["parteners"] : (function () { throw new RuntimeError('Variable "parteners" does not exist.', 54, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["partener"]) {
-            // line 56
+            // line 55
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "title", [], "any", false, false, false, 57), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "title", [], "any", false, false, false, 56), "html", null, true);
             echo "</h2>
 \t\t\t\t<p>";
-            // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "description", [], "any", false, false, false, 58), "html", null, true);
-            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 58))) {
-                // line 59
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "description", [], "any", false, false, false, 57), "html", null, true);
+            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 57))) {
+                // line 58
                 echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 59), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partener"], "link", [], "any", false, false, false, 58), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 61
+            // line 60
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['partener'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 62
         echo "
 \t\t";
-        // line 64
+        // line 63
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["hobbies"]) || array_key_exists("hobbies", $context) ? $context["hobbies"] : (function () { throw new RuntimeError('Variable "hobbies" does not exist.', 64, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["hobbies"]) || array_key_exists("hobbies", $context) ? $context["hobbies"] : (function () { throw new RuntimeError('Variable "hobbies" does not exist.', 63, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["hobbie"]) {
-            // line 65
+            // line 64
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "title", [], "any", false, false, false, 66), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "title", [], "any", false, false, false, 65), "html", null, true);
             echo "</h2>
 \t\t\t\t";
-            // line 67
+            // line 66
             if ( !twig_test_empty($context["hobbie"])) {
-                // line 68
+                // line 67
                 echo "\t\t\t\t\t<p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "description", [], "any", false, false, false, 68), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "description", [], "any", false, false, false, 67), "html", null, true);
                 echo "<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "link", [], "any", false, false, false, 68), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "link", [], "any", false, false, false, 67), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 70
+            // line 69
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['hobbie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 71
+        // line 70
         echo " 
 
 \t\t";
-        // line 73
+        // line 72
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tickets"]) || array_key_exists("tickets", $context) ? $context["tickets"] : (function () { throw new RuntimeError('Variable "tickets" does not exist.', 73, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tickets"]) || array_key_exists("tickets", $context) ? $context["tickets"] : (function () { throw new RuntimeError('Variable "tickets" does not exist.', 72, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["ticket"]) {
-            // line 74
+            // line 73
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 75
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "title", [], "any", false, false, false, 75), "html", null, true);
+            // line 74
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "title", [], "any", false, false, false, 74), "html", null, true);
             echo "</h2>
 \t\t\t\t<p>";
-            // line 76
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "description", [], "any", false, false, false, 76), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "description", [], "any", false, false, false, 75), "html", null, true);
             echo "
 \t\t\t\t";
-            // line 77
+            // line 76
             if ( !twig_test_empty($context["ticket"])) {
-                // line 78
+                // line 77
                 echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "link", [], "any", false, false, false, 78), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "link", [], "any", false, false, false, 77), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 80
+            // line 79
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ticket'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 81
         echo "    </main>
 ";
         
@@ -279,7 +278,7 @@ class __TwigTemplate_0e1fbb025c37139628620bc92ed39731 extends Template
 
     public function getDebugInfo()
     {
-        return array (  260 => 82,  253 => 80,  247 => 78,  245 => 77,  241 => 76,  237 => 75,  234 => 74,  230 => 73,  226 => 71,  219 => 70,  211 => 68,  209 => 67,  205 => 66,  202 => 65,  198 => 64,  195 => 63,  188 => 61,  182 => 59,  179 => 58,  175 => 57,  172 => 56,  168 => 55,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  259 => 81,  252 => 79,  246 => 77,  244 => 76,  240 => 75,  236 => 74,  233 => 73,  229 => 72,  225 => 70,  218 => 69,  210 => 67,  208 => 66,  204 => 65,  201 => 64,  197 => 63,  194 => 62,  187 => 60,  181 => 58,  178 => 57,  174 => 56,  171 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -335,7 +334,6 @@ class __TwigTemplate_0e1fbb025c37139628620bc92ed39731 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
 \t\t{% for partener in parteners %}

@@ -18,7 +18,7 @@
 				</li>
 				<li><a href="/user/news" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
 				</li>
-				<li><a href="/user/offers" id="offers"><img src="{{asset('img/discount-open.png')}}">Offres</a>
+				<li><a href="/user/offers/desktop/" id="offers"><img src="{{asset('img/discount-open.png')}}">Offres</a>
 				</li>
 			</ul>
 		</nav>
@@ -27,7 +27,7 @@
     <main>
         <div id="banner_top">
             <section id="banner_top_filter">
-                <h1>LE CE DE CAMPINGAZ</h1>
+				<h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -50,10 +50,21 @@
 		</div>
 
 		<div id="bar">
-			
 		</div>
 
+		{% if parteners is empty %}
+			<img id="empty" src="{{asset('img/empty.png')}}">
+			<h2 id="empty_content">Aucune offres...</h2>
+		{% endif %}
+
 		{% for partener in parteners %}
+			{% if partener.dates is not empty %}
+				<div class="offers_db_date">
+						<p class="dates">
+							date limite :  <div class="space_offers_db"></div>
+						{{ partener.dates|format_datetime('short', 'none', locale='fr') }}</p>
+				</div>
+			{% endif %}
 			<div class="offers_db">
 				<h2>{{partener.title}}</h2>
 				<p>{{partener.description}}{% if partener.link is not empty %}

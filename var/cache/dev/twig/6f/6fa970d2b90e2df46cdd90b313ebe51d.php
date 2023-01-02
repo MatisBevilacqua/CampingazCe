@@ -126,7 +126,7 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"/user/offers\" id=\"offers\"><img src=\"";
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"";
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
@@ -138,7 +138,7 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+\t\t\t\t<h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -160,41 +160,66 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
 \t\t";
-        // line 55
+        // line 54
+        if (twig_test_empty((isset($context["tickets"]) || array_key_exists("tickets", $context) ? $context["tickets"] : (function () { throw new RuntimeError('Variable "tickets" does not exist.', 54, $this->source); })()))) {
+            // line 55
+            echo "\t\t\t<img id=\"empty\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/empty.png"), "html", null, true);
+            echo "\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t";
+        }
+        // line 58
+        echo "
+\t\t";
+        // line 59
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tickets"]) || array_key_exists("tickets", $context) ? $context["tickets"] : (function () { throw new RuntimeError('Variable "tickets" does not exist.', 55, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tickets"]) || array_key_exists("tickets", $context) ? $context["tickets"] : (function () { throw new RuntimeError('Variable "tickets" does not exist.', 59, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["ticket"]) {
-            // line 56
+            // line 60
+            echo "\t\t\t";
+            if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["ticket"], "dates", [], "any", false, false, false, 60))) {
+                // line 61
+                echo "\t\t\t\t<div class=\"offers_db_date\">
+\t\t\t\t\t<p class=\"dates\">
+\t\t\t\t\t\tdate limite :  <div class=\"space_offers_db\"></div>
+\t\t\t\t\t";
+                // line 64
+                echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatDateTime($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "dates", [], "any", false, false, false, 64), "short", "none", "", null, "gregorian", "fr"), "html", null, true);
+                echo "</p>
+\t\t\t\t</div>
+\t\t\t";
+            }
+            // line 67
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "title", [], "any", false, false, false, 57), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "title", [], "any", false, false, false, 68), "html", null, true);
             echo "</h2>
 \t\t\t\t<p>";
-            // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "description", [], "any", false, false, false, 58), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "description", [], "any", false, false, false, 69), "html", null, true);
             echo "
 \t\t\t\t";
-            // line 59
+            // line 70
             if ( !twig_test_empty($context["ticket"])) {
-                // line 60
+                // line 71
                 echo "\t\t\t\t\t<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "link", [], "any", false, false, false, 60), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ticket"], "link", [], "any", false, false, false, 71), "html", null, true);
                 echo "\"> lien vers le partenaire ici</a>.</p>
 \t\t\t\t";
             }
-            // line 62
+            // line 73
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ticket'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 75
         echo "    </main>
 ";
         
@@ -217,7 +242,7 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
 
     public function getDebugInfo()
     {
-        return array (  198 => 64,  191 => 62,  185 => 60,  183 => 59,  179 => 58,  175 => 57,  172 => 56,  168 => 55,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  223 => 75,  216 => 73,  210 => 71,  208 => 70,  204 => 69,  200 => 68,  197 => 67,  191 => 64,  186 => 61,  183 => 60,  179 => 59,  176 => 58,  169 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -242,7 +267,7 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
 \t\t\t\t</li>
 \t\t\t\t<li><a  href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href-\"/user/offers\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
+\t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</nav>
@@ -251,7 +276,7 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
     <main>
         <div id=\"banner_top\">
             <section id=\"banner_top_filter\">
-                <h1>LE CE DE CAMPINGAZ</h1>
+\t\t\t\t<h1>Offres</h1>
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
@@ -273,10 +298,21 @@ class __TwigTemplate_90a632b719de54922ce5eb0d81fca7b1 extends Template
 \t\t</div>
 
 \t\t<div id=\"bar\">
-\t\t\t
 \t\t</div>
 
+\t\t{% if tickets is empty %}
+\t\t\t<img id=\"empty\" src=\"{{asset('img/empty.png')}}\">
+\t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
+\t\t{% endif %}
+
 \t\t{% for ticket in tickets %}
+\t\t\t{% if ticket.dates is not empty %}
+\t\t\t\t<div class=\"offers_db_date\">
+\t\t\t\t\t<p class=\"dates\">
+\t\t\t\t\t\tdate limite :  <div class=\"space_offers_db\"></div>
+\t\t\t\t\t{{ ticket.dates|format_datetime('short', 'none', locale='fr') }}</p>
+\t\t\t\t</div>
+\t\t\t{% endif %}
 \t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>{{ticket.title}}</h2>
 \t\t\t\t<p>{{ticket.description}}

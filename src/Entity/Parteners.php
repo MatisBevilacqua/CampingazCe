@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PartenersRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: PartenersRepository::class)]
 class Parteners
@@ -21,6 +22,9 @@ class Parteners
 
     #[ORM\Column(length: 255)]
     private ?string $link = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $dates = null;
 
 
     public function getId(): ?int
@@ -60,6 +64,18 @@ class Parteners
     public function setLink(string $link): self
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getDates(): ?\DateTimeInterface
+    {
+        return $this->dates;
+    }
+
+    public function setDates(?\DateTimeInterface $dates): self
+    {
+        $this->dates = $dates;
 
         return $this;
     }
