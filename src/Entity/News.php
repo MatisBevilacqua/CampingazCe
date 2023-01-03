@@ -27,6 +27,9 @@ class News
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $images = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $images_big = null;
+
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $dates = null;
 
@@ -91,6 +94,18 @@ class News
     public function setImages(?string $images): self
     {
         $this->images = $images;
+
+        return $this;
+    }
+
+    public function getImages_big(): ?string
+    {
+        return $this->images_big;
+    }
+
+    public function setImages_big(?string $images_big): self
+    {
+        $this->images_big = $images_big;
 
         return $this;
     }

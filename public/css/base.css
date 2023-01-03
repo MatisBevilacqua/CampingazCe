@@ -65,3 +65,10 @@ li > a > img{
 html{
     padding-bottom: 10vh;
 }
+
+@media (min-width: 1200px) {
+    li > a > img {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+}

@@ -116,12 +116,12 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
+\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-closed.png"), "html", null, true);
         echo "\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"user/news\"id=\"news\"><img src=\"";
+\t\t\t\t<li><a href=\"/\"id=\"news\"><img src=\"";
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
@@ -145,12 +145,12 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
 
 \t\t<div id=\"link\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>\t
-\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs</a>
+\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>
+\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs / sports / Aide à la scolarité et barèmes</a>
 \t\t\t</div>
 
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/travel\">Voyages</a>
+\t\t\t\t<a href=\"/user/offers/travel\">Voyages et barème</a>
 \t\t\t\t<a href=\"/user/offers/parteners\">Partenaires</a>
 \t\t\t</div>
 
@@ -207,7 +207,7 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "description", [], "any", false, false, false, 70), "html", null, true);
                 echo "<a id=\"link_offers_db\" href=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["hobbie"], "link", [], "any", false, false, false, 70), "html", null, true);
-                echo "\"> lien vers le partenaire ici</a>.</p>
+                echo "\"> lien vers le partenaire</a>.</p>
 \t\t\t\t";
             }
             // line 72
@@ -261,9 +261,9 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"user/news\"id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
+\t\t\t\t<li><a href=\"/\"id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
@@ -281,12 +281,12 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
 
 \t\t<div id=\"link\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>\t
-\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs</a>
+\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>
+\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs / sports / Aide à la scolarité et barèmes</a>
 \t\t\t</div>
 
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/travel\">Voyages</a>
+\t\t\t\t<a href=\"/user/offers/travel\">Voyages et barème</a>
 \t\t\t\t<a href=\"/user/offers/parteners\">Partenaires</a>
 \t\t\t</div>
 
@@ -314,7 +314,7 @@ class __TwigTemplate_60a49803d3303f2d3e4f816cc2b27e89 extends Template
 \t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>{{hobbie.title}}</h2>
 \t\t\t\t{% if hobbie is not empty %}
-\t\t\t\t\t<p>{{hobbie.description}}<a id=\"link_offers_db\" href=\"{{hobbie.link}}\"> lien vers le partenaire ici</a>.</p>
+\t\t\t\t\t<p>{{hobbie.description}}<a id=\"link_offers_db\" href=\"{{hobbie.link}}\"> lien vers le partenaire</a>.</p>
 \t\t\t\t{% endif %}
 \t\t\t</div>
 \t\t{% endfor %}

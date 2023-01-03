@@ -110,24 +110,21 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "\t<div class=\"img_top_logo\">
-\t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg\" alt=\"l'image charge\">
-\t</div>
-\t<header>
+        echo "\t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"";
-        // line 17
+\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"";
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-closed.png"), "html", null, true);
         echo "\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"";
-        // line 19
+\t\t\t\t<li><a href=\"/\" id=\"news\"><img src=\"";
+        // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/news-closed.png"), "html", null, true);
         echo "\">Actualités</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"";
-        // line 21
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/discount-open.png"), "html", null, true);
         echo "\">Offres</a>
 \t\t\t\t</li>
@@ -142,15 +139,15 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
-        
+
 \t\t<div id=\"link\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>\t
-\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs</a>
+\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>
+\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs / sports / Aide à la scolarité et barèmes</a>
 \t\t\t</div>
 
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/travel\">Voyages</a>
+\t\t\t\t<a href=\"/user/offers/travel\">Voyages et barème</a>
 \t\t\t\t<a href=\"/user/offers/parteners\">Partenaires</a>
 \t\t\t</div>
 
@@ -163,45 +160,45 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 \t\t\t
 \t\t</div>
 \t\t";
-        // line 54
-        if (twig_test_empty((isset($context["desktop"]) || array_key_exists("desktop", $context) ? $context["desktop"] : (function () { throw new RuntimeError('Variable "desktop" does not exist.', 54, $this->source); })()))) {
-            // line 55
+        // line 51
+        if (twig_test_empty((isset($context["desktop"]) || array_key_exists("desktop", $context) ? $context["desktop"] : (function () { throw new RuntimeError('Variable "desktop" does not exist.', 51, $this->source); })()))) {
+            // line 52
             echo "\t\t\t<img id=\"empty\" src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/empty.png"), "html", null, true);
             echo "\">
 \t\t\t<h2 id=\"empty_content\">Aucune offres...</h2>
 \t\t";
         }
-        // line 58
+        // line 55
         echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($context["desktop"]);
         foreach ($context['_seq'] as $context["_key"] => $context["desktop"]) {
-            // line 59
+            // line 56
             echo "\t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>";
-            // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 60), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 57), "html", null, true);
             echo "</h2>
 \t\t\t\t";
-            // line 61
+            // line 58
             if ( !twig_test_empty($context["desktop"])) {
-                // line 62
+                // line 59
                 echo "\t\t\t\t\t<p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "description", [], "any", false, false, false, 62), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "description", [], "any", false, false, false, 59), "html", null, true);
                 echo "<a id=\"link_offers_db\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 62), "html", null, true);
-                echo "\"> lien vers le partenaire ici</a>.</p>
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "title", [], "any", false, false, false, 59), "html", null, true);
+                echo "\"> lien vers le partenaire</a>.</p>
 \t\t\t\t";
             }
-            // line 64
+            // line 61
             echo "\t\t\t</div>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['desktop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 63
         echo "    </main>
 ";
         
@@ -224,7 +221,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  205 => 66,  198 => 64,  190 => 62,  188 => 61,  184 => 60,  181 => 59,  176 => 58,  169 => 55,  167 => 54,  131 => 21,  126 => 19,  121 => 17,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  202 => 63,  195 => 61,  187 => 59,  185 => 58,  181 => 57,  178 => 56,  173 => 55,  166 => 52,  164 => 51,  128 => 18,  123 => 16,  118 => 14,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -239,15 +236,12 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 {% endblock %}
 
 {% block body %}
-\t<div class=\"img_top_logo\">
-\t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg\" alt=\"l'image charge\">
-\t</div>
 \t<header>
 \t\t<nav>
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"/\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
+\t\t\t\t<li><a href=\"/home\" id=\"home\"><img src=\"{{asset('img/home-closed.png')}}\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"/user/news\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
+\t\t\t\t<li><a href=\"/\" id=\"news\"><img src=\"{{asset('img/news-closed.png')}}\">Actualités</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"/user/offers/desktop/\" id=\"offers\"><img src=\"{{asset('img/discount-open.png')}}\">Offres</a>
 \t\t\t\t</li>
@@ -262,15 +256,15 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
-        
+
 \t\t<div id=\"link\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>\t
-\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs</a>
+\t\t\t\t<a href=\"/user/offers/desktop\">Le bureau</a>
+\t\t\t\t<a href=\"/user/offers/hobbies\">Culture / Loisirs / sports / Aide à la scolarité et barèmes</a>
 \t\t\t</div>
 
 \t\t\t<div class=\"row\">
-\t\t\t\t<a href=\"/user/offers/travel\">Voyages</a>
+\t\t\t\t<a href=\"/user/offers/travel\">Voyages et barème</a>
 \t\t\t\t<a href=\"/user/offers/parteners\">Partenaires</a>
 \t\t\t</div>
 
@@ -290,7 +284,7 @@ class __TwigTemplate_6fe672c6d9dd3aca5917ee46f7448aa3 extends Template
 \t\t\t<div class=\"offers_db\">
 \t\t\t\t<h2>{{desktop.title}}</h2>
 \t\t\t\t{% if desktop is not empty %}
-\t\t\t\t\t<p>{{desktop.description}}<a id=\"link_offers_db\" href=\"{{desktop.title}}\"> lien vers le partenaire ici</a>.</p>
+\t\t\t\t\t<p>{{desktop.description}}<a id=\"link_offers_db\" href=\"{{desktop.title}}\"> lien vers le partenaire</a>.</p>
 \t\t\t\t{% endif %}
 \t\t\t</div>
 \t\t{% endfor %}

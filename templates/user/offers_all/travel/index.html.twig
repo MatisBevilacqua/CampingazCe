@@ -8,15 +8,12 @@
 {% endblock %}
 
 {% block body %}
-	<div class="img_top_logo">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg" alt="l'image charge">
-	</div>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
+				<li><a href="/home" id="home"><img src="{{asset('img/home-closed.png')}}">Accueil</a>
 				</li>
-				<li><a href="/user/news" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
+				<li><a href="/" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
 				</li>
 				<li><a href="/user/offers/desktop/" id="offers"><img src="{{asset('img/discount-open.png')}}">Offres</a>
 				</li>
@@ -31,15 +28,15 @@
                 <p>Retrouvez toutes les offres du ce de campingaz.</p>
             </section>
         </div>
-		
+
 		<div id="link">
 			<div class="row">
-				<a href="/user/offers/desktop">Le bureau</a>	
-				<a href="/user/offers/hobbies">Culture / Loisirs</a>
+				<a href="/user/offers/desktop">Le bureau</a>
+				<a href="/user/offers/hobbies">Culture / Loisirs / sports / Aide à la scolarité et barèmes</a>
 			</div>
 
 			<div class="row">
-				<a href="/user/offers/travel">Voyages</a>
+				<a href="/user/offers/travel">Voyages et barème</a>
 				<a href="/user/offers/parteners">Partenaires</a>
 			</div>
 
@@ -68,7 +65,7 @@
 				<h2>{{travel.title}}</h2>
 				<p>{{travel.description}}
 				{% if travel is not empty %}
-					<a id="link_offers_db" href="{{travel.link}}"> lien vers le partenaire ici</a>.</p>
+					<a id="link_offers_db" href="{{travel.link}}"> lien vers le partenaire </a>.</p>
 				{% endif %}
 			</div>			
 		{% endfor %}

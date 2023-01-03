@@ -18,7 +18,7 @@ class NewsController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('user/news', name: 'app_news')]
+    #[Route('/', name: 'app_news')]
     public function index(): Response
     {
        $repository = $this->entityManager->getRepository(News::class);

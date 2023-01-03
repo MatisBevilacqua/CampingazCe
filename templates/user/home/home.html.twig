@@ -8,15 +8,12 @@
 {% endblock %}
 
 {% block body %}
-	<div class="img_top_logo">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Campingazlogo.jpg" alt="l'image charge">
-	</div>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/" id="home"><img src="{{asset('img/home-open.png')}}">Accueil</a>
+				<li><a href="/home" id="home"><img src="{{asset('img/home-open.png')}}">Accueil</a>
 				</li>
-				<li><a href="/user/news" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
+				<li><a href="/" id="news"><img src="{{asset('img/news-closed.png')}}">Actualités</a>
 				</li>
 				<li><a href="/user/offers/desktop/" id="offers"><img src="{{asset('img/discount-closed.png')}}">Offres</a>
 				</li>
@@ -34,7 +31,43 @@
 		<div id="bar">
 		</div>
 
-		<section id="avis">
-		</section>
+		<div id="container">
+			{% if news is empty %}
+				<img id="empty" src="{{asset('img/empty.png')}}">
+				<h2 id="empty_content">Aucune actualités...</h2>
+			{% endif %}
+			{% for new in news %}
+
+				{% if new.images_big is not empty %}
+					<div class="if_empty">
+						<img src={{ new.images_big }}>
+					</div>
+				{% endif %}
+
+				{% if new.images_big is empty %}
+				<div class="offers_db">
+					<div class="title_dates_offers_db">
+						{% if new.title is not empty %}
+							<h2>{{new.title}}</h2>
+						{% endif %}
+						<div class="space_offers_db"></div>
+						<p class="dates">{{ new.dates|format_datetime('short', 'none', locale='fr') }}</p>
+					</div>
+					{% if new.description is not empty %}
+						<p>{{new.description}}
+						{% if new.links is not empty %}
+							<a id="link_offers_db" href="{{new.links}}">accéder au partenaire</a>.
+							</p>
+						{% endif %}
+					{% endif %}
+					{% if new.images is not empty %}
+						<div class="img_offers_db">
+							<img src={{new.images}}>
+						</div>
+					{% endif %}
+				</div>
+				{% endif %}
+			{% endfor %}
+		</div>
     </main>
 {% endblock %}
